@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Arya Jii 👑❤️</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+min-height:100vh;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle at 50% 35%,#4b1732,#170b18 50%,#050307);
+color:#f8e7b0;
+font-family:Georgia,serif;
+}
+
+.card{
+width:92%;
+max-width:520px;
+padding:40px 25px;
+text-align:center;
+border:1px solid #d5ad50;
+border-radius:28px;
+background:rgba(10,6,12,.78);
+box-shadow:0 0 50px rgba(220,170,60,.25);
+z-index:2;
+}
+
+.crown{
+font-size:55px;
+animation:float 2s infinite ease-in-out;
+}
+
+h1{
+font-size:clamp(38px,10vw,60px);
+margin:12px 0;
+background:linear-gradient(90deg,#fff0a0,#d6a83e,#fff0a0);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.sub{
+font-size:15px;
+letter-spacing:2px;
+color:#f0c7d7;
+}
+
+.msg{
+font-family:Arial,sans-serif;
+line-height:1.7;
+color:#f8eaf0;
+margin:25px 0;
+}
+
+button{
+border:1px solid #d8ad4b;
+background:linear-gradient(135deg,#d8ad4b,#8d641d);
+color:#160b10;
+padding:14px 25px;
+border-radius:30px;
+font-weight:bold;
+font-size:15px;
+}
+
+#surprise{
+display:none;
+margin-top:20px;
+font-family:Arial;
+color:#ffd8e6;
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+color:#ed91ad;
+animation:rise linear infinite;
+}
+
+@keyframes rise{
+from{transform:translateY(110vh);opacity:0}
+20%{opacity:.8}
+to{transform:translateY(-15vh);opacity:0}
+}
+
+@keyframes float{
+50%{transform:translateY(-8px)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="crown">👑</div>
+
+<div class="sub">
+A ROYAL DAY FOR A SPECIAL PERSON
+</div>
+
+<h1>
+Happy Birthday<br>
+Arya Jii ❤️
+</h1>
+
+<div class="msg">
+Aaj ka din thoda special hai… ✨<br>
+kyunki aaj <b>Arya Jii</b> ka birthday hai. 🎂<br><br>
+
+Aapki smile hamesha aise hi chamakti rahe,<br>
+aur aapki life mein pyaar, khushiyan<br>
+aur bahut saari royal memories aayein. 🌹👑
+</div>
+
+<button onclick="surprise()">
+Tap for a little surprise 💌
+</button>
+
+<div id="surprise">
+Some people deserve wishes…<br>
+but Arya Jii deserves a whole celebration. ❤️👑
+</div>
+
+</div>
+
+<script>
+
+function surprise(){
+document.getElementById("surprise").style.display="block";
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+h.innerHTML=["❤️","♡","🌹","✨"][i%4];
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(5+Math.random()*6)+"s";
+
+h.style.animationDelay=(-Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+}
+}
+
+</script>
+
+</body>
+</html>
